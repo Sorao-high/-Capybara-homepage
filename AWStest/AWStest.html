@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カピバラたん</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        header {
+            text-align: left;
+        }
+
+        header h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            color: pink; /* かわいい感じの色 */
+        }
+
+        header hr {
+            border: 2px solid red; /* 赤い線 */
+        }
+
+        #image-container {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0; /* 最初は非表示 */
+            animation: fadeIn 2s ease-in-out; /* フェードインアニメーション */
+        }
+
+        #image-container.show {
+            opacity: 1; /* 表示 */
+        }
+
+        #image {
+            width: 400px;
+            height: 400px;
+            animation: zoomAnimation 1s ease-in-out 3 alternate; /* 拡大縮小アニメーション */
+        }
+
+        #congrats {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 36px;
+            color: purple; /* おめでたい感じの色 */
+        }
+
+        footer hr {
+            border: 2px solid black; /* 黒い線 */
+        }
+
+        footer a {
+            text-decoration: none;
+            color: blue; /* リンクの色 */
+        }
+
+        /* フェードインアニメーション */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 拡大縮小アニメーション */
+        @keyframes zoomAnimation {
+            0%, 100% {
+                transform: scale(1); /* 初期と最終の状態 */
+            }
+            50% {
+                transform: scale(1.2); /* 中間で拡大 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>カピバラたん</h1>
+        <hr>
+    </header>
+
+    <div id="congrats">
+        デプロイ成功!!
+    </div>
+
+    <div id="image-container" class="show">
+        <img id="image" src="AWStest.png" alt="カピバラ画像">
+    </div>
+
+    <div>
+        <p>おめでとう!!</p>
+    </div>
+
+    <footer>
+        <hr>
+        <p><a href="https://twitter.com/Soraotwi" target="_blank">Twitterアカウント</a>にアクセス</p>
+    </footer>
+</body>
+</html>
